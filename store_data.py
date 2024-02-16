@@ -25,6 +25,8 @@ AGILE_IMPORT_78 = ('AGILE-22-08-31/electricity-tariffs/E-1R-AGILE-22-08-31-')
 AGILE_IMPORT_VAR_100 = ('AGILE-VAR-22-10-19/electricity-tariffs/E-1R-AGILE-VAR-22-10-19-')
 AGILE_IMPORT_FLEX_100 = ('AGILE-FLEX-22-11-25/electricity-tariffs/E-1R-AGILE-FLEX-22-11-25-')
 
+AGILE_FLUX_IMPORT = ('FLUX-IMPORT-23-02-14/electricity-tariffs/E-1R-FLUX-IMPORT-23-02-14-')
+
 AGILE_EXPORT = ('AGILE-OUTGOING-19-05-13/electricity-tariffs/E-1R-AGILE-OUTGOING-19-05-13-')
 
 AGILE_REGIONS = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'P', 'N', 'J', 'H', 'K', 'L', 'M']
@@ -308,6 +310,8 @@ if config['Mode'] == 'agile_import':
         AGILE_VERSION = AGILE_IMPORT_VAR_100
     elif AGILE_CAP == 101:
         AGILE_VERSION = AGILE_IMPORT_FLEX_100
+    elif AGILE_CAP == 40:
+        AGILE_VERSION = AGILE_FLUX_IMPORT
     else:
         raise SystemExit('Error: Agile cap of ' + str(AGILE_CAP) + ' refers to an unknown tariff.')
 
